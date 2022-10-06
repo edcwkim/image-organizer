@@ -1,4 +1,5 @@
-### Infra
+### Infra Plan
+| --- | --- |
 | DNS | Cloudflare |
 | Server | Render (Django) |
 | Cache | ⤷ (local memory) |
