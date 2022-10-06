@@ -1,7 +1,8 @@
 ### Infra Plan
-
+| Key | Value |
+| --- | --- |
 | DNS | Cloudflare |
-| Server | Render (Django) |
+| Front-end & API server | Render (Django) |
 | Cache | ⤷ (local memory) |
 | DB | Cloudflare R2 (JSON) |
 | Stylesheets | Cloudflare R2 |
