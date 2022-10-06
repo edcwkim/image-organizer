@@ -4,6 +4,6 @@
 | DNS | Cloudflare |
 | Frontend & API server | Render (Django) |
 | Cache | ⤷ *local memory* |
-| DB | Cloudflare R2 (JSON) |
+| Structured data | Cloudflare R2 (JSON) |
 | Stylesheets | Cloudflare R2 |
 | Images | Cloudflare Images |
