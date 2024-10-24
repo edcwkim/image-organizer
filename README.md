@@ -2,8 +2,7 @@
 | Key | Value |
 | --- | --- |
 | DNS | Cloudflare |
-| Frontend & API server | Render (Django) |
-| Cache | ⤷ *local memory* |
-| Stylesheets | Cloudflare R2 |
-| Structured data | Cloudflare R2 (JSON) |
+| Frontend & Auth server | Render (Django) |
+| Stylesheets | ⤷ *inline* |
+| Scripts | ⤷ *inline* |
 | Images | Cloudflare Images |

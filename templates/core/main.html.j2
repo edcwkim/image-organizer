@@ -1,0 +1,15 @@
+{% extends 'base.html.j2' %}
+
+{% block main %}
+<main>
+  {% for category, category_image_list in image_list|groupby('category')|sort(attribute=0) %}
+  <div style="position: relative; overflow-x: scroll; display: flex; align-items: center; gap: 1rem; padding: 2.25rem calc(50% - 120px);">
+    {% for image in category_image_list|sort(attribute='global_ts', reverse=True) %}
+    <div style="flex: 0 0 {{ image.size.width / 2 }}px; position: relative; overflow: hidden; border-radius: 1px;">
+      <img src="{{ image.url }}" width="100%">
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</main>
+{% endblock %}

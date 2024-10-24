@@ -1,24 +1,22 @@
+import os
+from dotenv import load_dotenv
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-krx+!1qgsdzg8)nt0jo30)zgd0=))p(c&v8_^z3h%qh8%+(=13'
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['[::1]', '127.0.0.1', '.localhost', '.ngrok-free.app']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.core',
     'django.contrib.staticfiles',
 ]
 
@@ -33,15 +31,10 @@ ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-            ],
-        },
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
     },
 ]
 
